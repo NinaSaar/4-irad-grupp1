@@ -1,0 +1,26 @@
+{
+  "name": "4-irad-grupp1",
+  "version": "1.0.0",
+  "description": "School project connect four",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://marialjungberg@github.com/NinaSaar/4-irad-grupp1.git"
+  },
+  "keywords": [
+    "connect",
+    "four"
+  ],
+  "author": "Maria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NinaSaar/4-irad-grupp1/issues"
+  },
+  "homepage": "https://github.com/NinaSaar/4-irad-grupp1#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
