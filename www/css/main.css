@@ -23,3 +23,67 @@ footer .phone-img {
 footer {
 	margin-top:90px;
 }
+
+body {
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:10px;
+
+  
+  line-height:130%;
+}
+
+
+ul, ol {
+  list-style-position: outside;
+  padding-left:20px;
+}
+
+ul {
+  list-style-type: square; 
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+nav {
+  background-color:#990033;
+  margin-top:50px;
+  border-radius:5px;
+}
+
+nav ul {
+  padding-left:0;
+}
+
+nav li {
+  display:inline;
+}
+
+nav a {
+  display:inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left:15px;
+  padding-right:15px;
+  
+  color: #fff;
+  text-decoration:underline;
+  font-family: 'Cabin';
+}
+
+nav a:visited {
+  color: #fff;
+}
+
+nav a:hover {
+  color:#fff;
+  background:#660033;
+}
+
+nav ul li:first-child a {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius:20px;
+}
+
