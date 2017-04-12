@@ -12,8 +12,10 @@ function readStartForm() {
 		$('#varna-ej-namn').modal('show') 
 	}
 	else {
+		// Show play game page
 	    $(".page").hide();
 	    $("#play").show();
+
 	}
 
 	/*let click = confirm("Press a button");
