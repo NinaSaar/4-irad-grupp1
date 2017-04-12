@@ -7,18 +7,21 @@ class Game {
 		board = new Board();
 	}
 
-//	let winner = board.checkBoard();
-//
-//	if (winner === "R" | winner === "r") {
-//		console.log(winner + " har vunnit!");
-//	}
-//	else {
-//		if (winner === "Y" | winner === "y") {
-//			console.log(winner + " har vunnit!");
-//		}
-//		else {
-//			console.log ("Ingen har vunnit ännu!");
-//		}
-//	}
+	move() {
+		let arr = ["R","R","R","R"," "," "];
+		board.replaceColumn(1,arr);
+		let winner = board.checkBoard();
+		let message = " ";
+
+		if (winner === "R" | winner === "r") {
+			message = "Röd har vunnit!";
+		}
+		else {
+			if (winner === "Y" | winner === "y") {
+				message = "Gul har vunnit!";
+			}
+		}
+	}
+
 
 }
