@@ -20,6 +20,9 @@
 </head>
 
 <body>
+
+<!-- här börjar menyn-->
+
     <header class="container">
 
       
@@ -35,7 +38,8 @@
             <a href="#create">Spela</a>
           </li>
           <li>
-          <a href="rules">Spelregler</a>
+          <a href="#rules">Spelregler</a>
+
           </li>
           <li>
           <a href="Score">HighScore</a>
@@ -50,7 +54,8 @@
       <div class="row">
 
 <!--- den fina bilden och knappdelen -->
-   
+
+        <jumbotron>
         <div class="col-md-7">
           <div class="jumbotron">
             <h1>Välkommen</h1> 
@@ -64,9 +69,9 @@
             <div class="box-content">
                     
                     <hr />
-                    <p><img src="fyrairad.jpg" width="200px" height="200px"></p>
+                    <p><img src="fyrairad.jpg" width="300px" height="300px"></p>
                     
-                    
+                    </jumbotron>
             </div>
           </div>
         </div>
@@ -86,6 +91,38 @@
         <input type="text" class="form-control" id="spelare2">
       </div>
       <button type="button" class="pull-right btn btn-primary start-game-btn">Starta</button>
+    </div>
+
+
+    <!-- spelregelsidan -->
+
+
+    <spelregler>
+    <div class="page" id="rules" hidden>
+    <h1> <b>Spelreger Fyra i rad</b></h1>
+    <p> 
+    <h5><b>Startposition och spelsyfte</b></h5>
+
+<p>Fyra i rad är ett populärt spel eftersom man kan lära sig de enkla reglerna snabbt och spelet ger nöje</p><p> för en lång tid. Syftet med detta spel är att placera fyra pjäser i en sammanhängande rad vertikalt, </p><p>horisontellt eller diagonalt. Spelet spelas på en fyrkantig bräda 8x8 rutor och börjar med ett tomt fält</p>
+
+
+<p><h5><b>Hur placerar man pjäser</b></h5></p>
+
+<p>Båda spelarna placerar sina pjäser (en pjäs per drag) på brädet. Regeln är att pjäsen alltid "faller ner".</p><p> Det betyder att pjäsen kan placeras på nedersta raden eller en rad över en annan pjäs i samma kolumn. </p>
+
+<p><h5><b>Hur avslutas spelet</b></h5></p>
+
+<p>Spelet avslutas om ett av följande villkor uppfylls:</p>
+<p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt.</p><p> Den spelaren vinner spelet.</p>
+<p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst.</p><p> I detta fall slutar spelet i draw/oavgjort. </p>
+
+
+        
+<p><img src="fyrairad-regler.gif" width="250px" height="250px">  <img src="fyrairadspel.gif" width="250px" height="250px"></p>
+</spelregler>
+
+
+
     </div>
   </main>
 
@@ -113,7 +150,7 @@
         <br>
         <div class="col-md-4">
           <center>
-            <img class="address-img" src="https://cdn1.iconfinder.com/data/icons/ui-5/502/address-512.png"  class="img-circle" alt="the-brains">
+            <img src="address.png" width="100" height="100px"  class="img-circle"> 
             <br>
             <h4 class="footertext">Adress</h4>
             <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan<br>
@@ -121,7 +158,7 @@
         </div>
         <div class="col-md-4">
           <center>
-            <img class="email-img" src="https://cdn.pixabay.com/photo/2014/04/03/10/02/email-309678_1280.png" class="img-circle" alt="...">
+            <img src="emailikon.png" class="img-circle"> 
             <br>
             <h4 class="footertext">Email</h4>
             <p class="footertext">fyrairad@spela.nu<br>
@@ -129,7 +166,7 @@
         </div>
         <div class="col-md-4">
           <center>
-            <img class="phone-img" src="https://cdn.pixabay.com/photo/2014/04/02/10/24/telephone-303745_1280.png"  class="img-circle" alt="...">
+            <img src="telefonikon.png" class="img-circle"> 
             <br>
             <h4 class="footertext">Telefon</h4>
             <p class="footertext">020 fyrairad<br>

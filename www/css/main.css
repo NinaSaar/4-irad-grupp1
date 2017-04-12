@@ -2,16 +2,22 @@ footer {
 	font-family: Calibri;
 }
 
+
+spelregler {
+  font-family: Calibri;
+}
+
+
 footer img {
 	width:100px;
 }
 
-footer .email-img {
+footer .emailikon.png {
 	margin-top:19px;
 	margin-bottom:20px;
 }
 
-footer .phone-img {
+footer .telefonikon.png {
 	margin-top:16px;
 	margin-bottom:17px;
 }
