@@ -7,7 +7,7 @@ class Game {
 		board = new Board();
 	}
 
-	move() {
+	makeMove() {
 		let arr = ["R","R","R","R"," "," "];
 		board.replaceColumn(1,arr);
 		let winner = board.checkBoard();
