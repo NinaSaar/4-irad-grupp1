@@ -71,7 +71,7 @@ fieldset[disabled] .btn-danger {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-color: #dbdbdb;
-  border-color: #ccc;
+  border-color: #FFC0CB;
 }
 .btn-default:hover,
 .btn-default:focus {

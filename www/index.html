@@ -55,20 +55,20 @@
 
 <!--- den fina bilden och knappdelen -->
 
-        
+     
         <div class="col-md-7">
-          <div class="jumbotron">
-            <h1>Välkommen</h1> 
-            <p>Nu ska vi spela fyra i rad!</p>
-            <a href="#spel" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
-        </div>
+            <div class="jumbotron margin-before-jumbo">
+              <h1>Välkommen</h1> 
+              <p>Nu ska vi spela fyra i rad!</p>
+              <a href="#spel" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
+            </div>
         </div>
              
-        <div class="col-md-5 text-center">
+        <div class="col-md-5 text-center margin-before-box">
           <div class="box">
             <div class="box-content">
                     
-                    <hr />
+                    
                     <p><img src="fyrairad.jpg" width="300px" height="300px"></p>
                     
                     
@@ -77,6 +77,7 @@
         </div>
       </div>           
     </div>
+
 
 <!-- Create game page -->
 
@@ -91,6 +92,8 @@
         <input type="text" class="form-control" id="spelare2">
       </div>
       <button type="button" class="pull-right btn btn-primary start-game-btn">Starta</button>
+
+
     </div>
 
 
@@ -166,16 +169,16 @@
     <div class="container">
     	<div class="row">
   		  <div class="col-xs-12">
-    			<div class="well">
-            <h2><center>Kontakta oss</center></h2>
+    			<div class="well" >
+            <h3><center>Kontakta oss</center></h3>
 				  </div>
         </div>
     	</div>
-      <div class="row">
+    <div class="row">
         <br>
         <div class="col-md-4">
           <center>
-            <img src="address.png" width="100" height="100px"  class="img-circle"> 
+            <img src="address.png"  class="img-circle"> 
             <br>
             <h4 class="footertext">Adress</h4>
             <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan<br>
@@ -200,6 +203,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- Här är en modal som varnar om man inte skrivit in namn -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="varna-ej-namn">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Skriv in namn på båda spelarna</h4>
+      </div>
+      <div class="modal-body">
+        <p>Innan du kan börja spela behöver du ange namn på båda spelarna,</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Tillbaka</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </body>
 </html>

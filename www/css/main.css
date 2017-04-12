@@ -2,6 +2,13 @@ footer {
 	font-family: Calibri;
 }
 
+.margin-before-jumbo {
+  margin-top:15px;
+}
+
+.margin-before-box {
+  margin-top:55px;
+}
 
 spelregler {
   font-family: Calibri;
@@ -9,17 +16,17 @@ spelregler {
 
 
 footer img {
-	width:100px;
+	width:30px;
 }
 
 footer .emailikon.png {
-	margin-top:19px;
-	margin-bottom:20px;
+	margin-top:60px;
+	margin-bottom:60px;
 }
 
 footer .telefonikon.png {
-	margin-top:16px;
-	margin-bottom:17px;
+	margin-top:10px;
+	margin-bottom:10px;
 }
 
 .start-btn {
@@ -27,7 +34,7 @@ footer .telefonikon.png {
 }
 
 footer {
-	margin-top:90px;
+	margin-top:40px;
 }
 
 body {
