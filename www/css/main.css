@@ -2,6 +2,7 @@ footer {
 	font-family: Calibri;
 }
 
+
 .margin-before-jumbo {
   margin-top:15px;
 }
@@ -61,7 +62,7 @@ ol {
 }
 
 nav {
-  background-color:#990033;
+  background-color:#6495ED;
   margin-top:50px;
   border-radius:5px;
 }
@@ -82,8 +83,9 @@ nav a {
   padding-right:15px;
   
   color: #fff;
-  text-decoration:underline;
-  font-family: 'Cabin';
+  font-size: 20px;
+  text-decoration:;
+  font-family: 'Calibri';
 }
 
 nav a:visited {
@@ -91,8 +93,8 @@ nav a:visited {
 }
 
 nav a:hover {
-  color:#fff;
-  background:#660033;
+  color:#white; 
+  background:#4682B4;
 }
 
 nav ul li:first-child a {
