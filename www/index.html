@@ -25,28 +25,25 @@
 
 <!-- här börjar menyn-->
 
-    <header class="container">
+  <header class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" data-toggle="tab" href="#start"><img src="Foton/litenikon.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a data-toggle="tab" href="#start">4 i rad</a></li>
+          <li><a data-toggle="tab" href="#start">Start</a></li>
+          <li><a data-toggle="tab" href="#create">Spela</a></li>
+          <li><a data-toggle="tab" href="#spelregler">Spelregler</a></li>
+          <li><a data-toggle="tab" href="#">Highscore</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-      
-         <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="Foton/litenikon.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;"></a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="index.html">4 i rad</a></li>
-      <li><a href="index.html">Start</a></li>
-      <li><a href="#">Spela</a></li>
-      <li><a href="#">Spelregler</a></li>
-      <li><a href="#">Highscore</a></li>
-    </ul>
-  </div>
-</nav>
-      
-    </header>
-
-  <main class="container">
-    <div class="page" id="start">
+  <main class="tab-content">
+    <div class="tab-pane" id="start">
       <div class="row">
 
 <!--- den fina bilden och knappdelen -->
@@ -77,7 +74,7 @@
 
 <!-- Create game page -->
 
-    <div class="page" id="create" hidden>
+    <div class="tab-pane" id="create">
       <h1>Skapa spel</h1>
       <div class="form-group">
         <label for="spelare1">Namn på spelare 1:</label>
@@ -96,8 +93,8 @@
     <!-- Spelregelsidan -->
 
 
-    <spelregler>
-    <div class="page" id="rules" hidden>
+   <div id="spelregler">
+    <div class="tab-pane" id="rules">
 
       <div class="col-md-7">
           
@@ -139,7 +136,7 @@
       
 
         
-</spelregler>
+</div>
 
 
 
@@ -147,7 +144,7 @@
 
 <!-- Play page -->
 
-    <div class="page" id="play" hidden>
+    <div class="tab-pane" id="play">
       <h1>Spela 4 i rad</h1>
     </div>
 
