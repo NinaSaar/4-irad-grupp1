@@ -1,3 +1,6 @@
+
+
+
 body {
   padding-left:100px;
   padding-right:100px;
@@ -65,5 +68,40 @@ nav ul li:first-child a {
 
 
 
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 
+body {
+  /* Margin bottom by footer height */
+
+  margin-bottom: 100px;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 110px;
+}
+
+
+
+@media screen and(max-width: 969px) {
+  body {
+      margin-bottom: 270;
+  }
+
+  footer {
+    height: 250;
+  }
+
+  
+
+}
