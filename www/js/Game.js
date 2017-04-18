@@ -2,9 +2,12 @@ class Game {
 	// Connect four game
 
 	constructor(
-		board
+		player1,
+		player2
 	) {
-		board = new Board();
+		this.board = new Board();
+		this.player1 = player1;
+		this.player2 = player2;
 	}
 }
 
