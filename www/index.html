@@ -5,7 +5,7 @@
   <meta charset="utf8">
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="bootstrap/css/spacelab-theme.css">
+  <link rel="stylesheet" href="bootstrap/css/cerulean-theme.css">
   <!-- My own CSS -->
   <link rel="stylesheet" href="css/main.css">
   <!-- JavaScript libraries -->
@@ -23,48 +23,56 @@
 
 <body>
 
-<!-- här börjar menyn-->
+  <!-- här börjar menyn-->
 
   <header class="container">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand" data-toggle="tab" href="#start"><img src="Foton/litenikon.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;"></a>
         </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a data-toggle="tab" href="#start">4 i rad</a></li>
-          <li><a data-toggle="tab" href="#start">Start</a></li>
-          <li><a data-toggle="tab" href="#create">Spela</a></li>
-          <li><a data-toggle="tab" href="#spelregler">Spelregler</a></li>
-          <li><a data-toggle="tab" href="#">Highscore</a></li>
-        </ul>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#start">Start</a></li>
+            <li><a href="#create">Spela</a></li>
+            <li><a href="#spelregler">Spelregler</a></li>
+            <li><a href="#">Highscore</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
 
-  <main class="tab-content">
-    <div class="tab-pane" id="start">
+  <main class="container">
+    <div class="page" id="start">
       <div class="row">
 
-<!--- den fina bilden och knappdelen -->
-    <div class="tab-pane" id="start">
+        <!--- den fina bilden och knappdelen -->
 
-     
+
         <div class="col-md-7">
-            <div class="jumbotron margin-before-jumbo">
-              <h1>Välkommen</h1> 
-              <p>Nu ska vi spela fyra i rad!</p>
-              <a href="#create" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
-            </div>
+          <div class="jumbotron margin-before-jumbo">
+            <h1>Välkommen</h1> 
+            <p>Nu ska vi spela fyra i rad!</p>
+            <a href="#create" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
+          </div>
         </div>
-             
+
         <div class="col-md-5 text-center margin-before-box">
           <div class="box">
             <div class="box-content">
 
-                    <p><img src="Foton/fyrairad.jpg" width="300px" height="300px"></p>
-                    
-       </div>             
+
+              <p><img src="Foton/fyrairad.jpg" width="300px" height="300px"></p>
+
+
             </div>
           </div>
         </div>
@@ -72,9 +80,9 @@
     </div>
 
 
-<!-- Create game page -->
+    <!-- Create game page -->
 
-    <div class="tab-pane" id="create">
+    <div class="page" id="create">
       <h1>Skapa spel</h1>
       <div class="form-group">
         <label for="spelare1">Namn på spelare 1:</label>
@@ -85,18 +93,16 @@
         <input type="text" class="form-control" id="spelare2">
       </div>
       <button type="button" class="pull-right btn btn-primary start-game-btn">Starta</button>
-
-
     </div>
 
 
     <!-- Spelregelsidan -->
 
 
-    <div class="tab-pane" id="spelregler">
+    <div class="page" id="spelregler">
 
       <div class="col-md-7">
-          
+
         <h1> <b>Spelreger Fyra i rad</b></h1><p> 
         <p></p>
         <h5><b>Startposition och spelsyfte</b></h5>
@@ -112,74 +118,203 @@
         <p>Spelet avslutas om ett av följande villkor uppfylls:</p>
         <p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Den spelaren vinner spelet.</p>
         <p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst. I detta fall slutar spelet i draw/oavgjort. </p>
-        
-             
       </div>
-        
-        
+
+
       <div class="col-md-5 text-center">
         <div class="box">
           <div class="box-content">
-                    
-                    
+
+
             <p><img src="Foton/fyrairad-regler.gif" width="210px" height="190"></p>
             <p><img src="Foton/fyrairadspel.gif" width="210px" height="190"></p>
-                    
-                    
+
+
           </div>
         </div>
       </div>
-    </div>           
-  </div>    
-</div>
-      
-
-        
-</div>
+    </div>    
 
 
+    <!-- Play page -->
 
+    <div class="page" id="play">
+    <!--Row 0-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b00"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b01"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b02"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b03"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b04"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b05"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b06"><img src="Foton/brick_whi.png"></p>
+      </div>
     </div>
-
-<!-- Play page -->
-
-    <div class="tab-pane" id="play">
-      <h1>Spela 4 i rad</h1>
+    <!--Row 1-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b10"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b11"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b12"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b13"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b14"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b15"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b16"><img src="Foton/brick_whi.png"></p>
+      </div>
     </div>
-
+    <!--Row 2-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b20"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b21"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b22"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b23"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b24"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b25"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b26"><img src="Foton/brick_whi.png"></p>
+      </div>
+    </div>
+    <!--Row 3-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b30"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b31"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b32"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b33"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b34"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b35"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b36"><img src="Foton/brick_whi.png"></p>
+      </div>
+    </div>
+    <!--Row 4-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b40"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b41"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b42"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b43"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b44"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b45"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b46"><img src="Foton/brick_whi.png"></p>
+      </div>
+    </div>
+    <!--Row 5-->
+    <div class="row">
+      <div class="col-xs-1"> <!--Col 0-->
+        <p class="b50"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 1-->
+        <p class="b51"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 2-->
+        <p class="b52"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 3-->
+        <p class="b53"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 4-->
+        <p class="b54"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 5-->
+        <p class="b55"><img src="Foton/brick_whi.png"></p>
+      </div>
+      <div class="col-xs-1"> <!--Col 6-->
+        <p class="b56"><img src="Foton/brick_whi.png"></p>
+      </div>
+    </div>
+    </div>
   </main>
 
 
-<!--Här la ja in footern-->
-
-
+   <!--Här la ja in footern-->
   <footer>
     <div class="container">
-    	<div class="row">
+      <div class="row">
         <div class="col-xs-12">
-    			<div class="well contact-us">
+          <div class="well" >
             <h3><center>Kontakta oss</center></h3>
-				  </div>
+          </div>
         </div>
-    	</div>
+      </div>
     <div class="row">
-        <br>
-        <div class="col-md-4">
-          <center>
-            <img src="Foton/address.png"  class="img-circle"> 
-            <br>
-            <h4 class="footertext">Adress</h4>
-            <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan<br>
-          </center>
-        </div>
-        <div class="col-md-4">
-          <center>
-            <img src="Foton/emailikon.png" class="img-circle"> 
-            <br>
-            <h4 class="footertext">Email</h4>
-            <p class="footertext">fyrairad@spela.nu<br>
-          </center>
-        </div>
+      <br>
+      <div class="col-md-4">
+        <center>
+          <img src="Foton/address.png"  class="img-circle"> 
+          <br>
+          <h4 class="footertext">Adress</h4>
+          <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan<br>
+        </center>
+      </div>
+      <div class="col-md-4">
+        <center>
+          <img src="Foton/emailikon.png" class="img-circle"> 
+          <br>
+          <h4 class="footertext">Email</h4>
+          <p class="footertext">fyrairad@spela.nu<br>
+        </center>
+      </div>
         <div class="col-md-4">
           <center>
             <img src="Foton/telefonikon.png" class="img-circle"> 
@@ -192,25 +327,25 @@
     </div>
   </footer>
 
-  <!-- Här är en modal som varnar om man inte skrivit in namn -->
+      <!-- Här är en modal som varnar om man inte skrivit in namn -->
 
 
   <div class="modal fade" tabindex="-1" role="dialog" id="varna-ej-namn">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Innan du kan gå vidare för att spela..</h4>
-      </div>
-      <div class="modal-body">
-        <p>Behöver du skriva in namnen på bägge spelarna,</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Innan du kan gå vidare för att spela..</h4>
+        </div>
+        <div class="modal-body">
+          <p>Behöver du skriva in namnen på bägge spelarna,</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
 </body>
 </html>
