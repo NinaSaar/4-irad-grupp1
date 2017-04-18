@@ -6,6 +6,12 @@ footer {
   background-color: #0000FF;
 }
 
+.ikon {
+
+  margin-top: -10px;
+}
+
+
 .margin-before-jumbo {
   margin-top:15px;
 }
@@ -59,58 +65,9 @@ body {
   line-height:130%;
 }
 
-
-ul, ol {
-  list-style-position: outside;
-  padding-left:20px;
-}
-
-ul {
-  list-style-type: square; 
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-nav {
-  background-color:#6495ED;
-  margin-top:20px;
-  border-radius:5px;
-}
-
-nav ul {
-  padding-left:0;
-}
-
-nav li {
-  display:inline;
-}
-
 nav a {
-  display:inline-block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left:20px;
-  padding-right:15px;
-  
-  color: #fff;
+
   font-size: 20px;
-  text-decoration:;
   font-family: 'Calibri';
-}
-
-nav a:visited {
-  color: #fff;
-}
-
-nav a:hover {
-  color:#white; 
-  background:#4682B4;
-}
-
-nav ul li:first-child a {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius:20px;
 }
 
