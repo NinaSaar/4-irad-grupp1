@@ -25,36 +25,25 @@
 
 <!-- här börjar menyn-->
 
-    <header class="container">
-
-      
-      <nav>
-        <ul>
-          <li>
-         <a href="#start">
-  <img src="Foton/litenikon.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
-</a>
-          </li>
-          <li>
-            <a href="#start">Start</a>
-          </li>
-          <li>
-             <a href="#create">Spela</a>
-          </li>
-          <li>
-          <a href="#rules">Spelregler</a>
-          </li>
-          <li>
-          <a href="Score">HighScore</a>
-          </li>
+  <header class="container">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" data-toggle="tab" href="#start"><img src="Foton/litenikon.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;"></a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a data-toggle="tab" href="#start">4 i rad</a></li>
+          <li><a data-toggle="tab" href="#start">Start</a></li>
+          <li><a data-toggle="tab" href="#create">Spela</a></li>
+          <li><a data-toggle="tab" href="#spelregler">Spelregler</a></li>
+          <li><a data-toggle="tab" href="#">Highscore</a></li>
         </ul>
-        
-      </nav>
-      
-    </header>
+      </div>
+    </nav>
+  </header>
 
-  <main class="container">
-    <div class="page" id="start">
+  <main class="tab-content">
+    <div class="tab-pane" id="start">
       <div class="row">
 
 <!--- den fina bilden och knappdelen -->
@@ -84,7 +73,7 @@
 
 <!-- Create game page -->
 
-    <div class="page" id="create" hidden>
+    <div class="tab-pane" id="create">
       <h1>Skapa spel</h1>
       <div class="form-group">
         <label for="spelare1">Namn på spelare 1:</label>
@@ -103,50 +92,50 @@
     <!-- Spelregelsidan -->
 
 
-    <spelregler>
-    <div class="page" id="rules" hidden>
+   <div id="spelregler">
+    <div class="tab-pane" id="rules">
 
       <div class="col-md-7">
           
-            <h1> <b>Spelreger Fyra i rad</b></h1><p> 
-            <p></p>
-            <h5><b>Startposition och spelsyfte</b></h5>
-<p>Fyra i rad är ett populärt spel eftersom man kan lära sig de enkla reglerna snabbt och spelet ger nöje för en lång tid. Syftet med detta spel är att placera fyra pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Spelet spelas på en fyrkantig bräda 8x8 rutor och börjar med ett tomt fält</p>
+        <h1> <b>Spelreger Fyra i rad</b></h1><p> 
+        <p></p>
+        <h5><b>Startposition och spelsyfte</b></h5>
+        <p>Fyra i rad är ett populärt spel eftersom man kan lära sig de enkla reglerna snabbt och spelet ger nöje för en lång tid. Syftet med detta spel är att placera fyra pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Spelet spelas på en fyrkantig bräda 8x8 rutor och börjar med ett tomt fält</p>
 
 
-<p><h5><b>Hur placerar man pjäser</b></h5></p>
+        <p><h5><b>Hur placerar man pjäser</b></h5></p>
 
-<p>Båda spelarna placerar sina pjäser (en pjäs per drag) på brädet. Regeln är att pjäsen alltid "faller ner". Det betyder att pjäsen kan placeras på nedersta raden eller en rad över en annan pjäs i samma kolumn. </p>
+        <p>Båda spelarna placerar sina pjäser (en pjäs per drag) på brädet. Regeln är att pjäsen alltid "faller ner". Det betyder att pjäsen kan placeras på nedersta raden eller en rad över en annan pjäs i samma kolumn. </p>
 
-<p><h5><b>Hur avslutas spelet</b></h5></p>
+        <p><h5><b>Hur avslutas spelet</b></h5></p>
 
-<p>Spelet avslutas om ett av följande villkor uppfylls:</p>
-<p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Den spelaren vinner spelet.</p>
-<p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst. I detta fall slutar spelet i draw/oavgjort. </p>
-</p>
+        <p>Spelet avslutas om ett av följande villkor uppfylls:</p>
+        <p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Den spelaren vinner spelet.</p>
+        <p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst. I detta fall slutar spelet i draw/oavgjort. </p>
+        
              
-         </div>
+      </div>
         
         
-        <div class="col-md-5 text-center">
-          <div class="box">
-            <div class="box-content">
+      <div class="col-md-5 text-center">
+        <div class="box">
+          <div class="box-content">
                     
                     
-                    <p><img src="Foton/fyrairad-regler.gif" width="210px" height="190"></p>
-                    <p><img src="Foton/fyrairadspel.gif" width="210px" height="190"></p>
+            <p><img src="Foton/fyrairad-regler.gif" width="210px" height="190"></p>
+            <p><img src="Foton/fyrairadspel.gif" width="210px" height="190"></p>
                     
                     
-            </div>
           </div>
         </div>
-      </div>           
-    </div>    
+      </div>
+    </div>           
+  </div>    
 </div>
       
 
         
-</spelregler>
+</div>
 
 
 
@@ -154,7 +143,7 @@
 
 <!-- Play page -->
 
-    <div class="page" id="play" hidden>
+    <div class="tab-pane" id="play">
       <h1>Spela 4 i rad</h1>
     </div>
 
