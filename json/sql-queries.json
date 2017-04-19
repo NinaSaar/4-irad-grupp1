@@ -1,7 +1,10 @@
 {
 
   "allHighScores": 
-  "SELECT * FROM high_scores ORDER BY score",
+  "SELECT * FROM high_scores",
+
+  "top10HighScores": 
+  "SELECT * FROM high_scores ORDER BY score, high_score_date DESC LIMIT 10",
 
   "addHighScore":
   "INSERT INTO high_scores (high_score_date,score,player_name) VALUES(?,?,?)"

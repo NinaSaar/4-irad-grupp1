@@ -61,10 +61,13 @@ $(function(){
 
 function getHighScoreList() {
 	new RunSqlQuery(
-	  'allHighScores',
+	  'top10HighScores',
 	  function(response){
 	  	for (let i = 0;i < response.length & i < 10;i++) {
-		    $("#high-score-"+i).html((i + 1) + ". " + response[i].player_name + ", " + response[i].score + " drag");
+		    $("#hs-rank-"+i).html((i + 1));
+		    $("#hs-name-"+i).html(response[i].player_name);
+		    $("#hs-score-"+i).html(response[i].score);
+		    $("#hs-date-"+i).html(response[i].high_score_date.substring(0,10));
 		}
   	}
 );
