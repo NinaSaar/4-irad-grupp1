@@ -58,6 +58,13 @@ class Game {
 		}
 	}
 
+
+	winnerFound(winner){
+		document.getElementById("msg-winner").innerHTML = winner.getName();
+		document.getElementById("msg-round").innerHTML = this.turn;
+		$('#game-over').modal('show');
+	}
+
 	/*logic for making a move
 	* If the move is possible it adds coin to board and updates UI,
 	* checks if there is a winner
@@ -66,15 +73,17 @@ class Game {
 	makeMove(col){
 		if(this.board.isMovePossible(col)){
 			this.board.addCoin(col, this.whoToPlay().getColor());
-			if(this.board.checkBoard() === "Y"){
-				console.log("gul vinner");
-			}else if(this.board.checkBoard() === "R"){
-				console.log("röd vinner");
-			}
 			this.turn++;
-			this.updateArrow();
+			if(this.board.checkBoard() === "Y"){
+				this.winnerFound(this.player2);
+			}else if(this.board.checkBoard() === "R"){
+				this.winnerFound(this.player1);
+			}else{
+				this.updateArrow();
+			}
 		}else{
-			$('#varna-full-column').modal('show') 
+
+			$('#varna-full-column').modal('show')
 		}
 	}
 	clearBoard(){

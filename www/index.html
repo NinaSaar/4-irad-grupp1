@@ -461,6 +461,41 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
+  <!-- $('#game-over').modal('show') -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="game-over">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Grattis!</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <h1>Vinnare: </h1>
+            </div>
+            <div class="col-sm-3">
+              <h1 id="msg-winner">spelare</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3">
+              <h1>Rundor: </h1>
+            </div>
+            <div class="col-sm-3">
+              <h1 id="msg-round">rundor</h1>
+            </div>
+          </div>
+          <p> </br>Klicka på ny runda för att spela igen </br>Klicka på avbryt för att återgå till startsidan</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="readStartForm()">Ny runda</button>
+          <button type="button" class="btn btn-primary" onclick="closeGame()">Avbryt</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
   <div class="modal fade" tabindex="-1" role="dialog" id="avsluta-spel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

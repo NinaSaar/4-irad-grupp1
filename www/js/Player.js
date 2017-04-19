@@ -19,4 +19,7 @@ class Player {
 	getColor(){
 		return this.color;
 	}
+	getName(){
+		return this.name;
+	}
 }

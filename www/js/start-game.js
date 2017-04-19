@@ -9,6 +9,7 @@ function readStartForm() {
 	let spelare2 = $('#spelare2').val();
 
 
+	$('#game-over').modal('hide');
 	if(spelare1 === "" || spelare2 === ""){
 		//alert("Skriv in namn på båda spelarna!");
 		$('#varna-ej-namn').modal('show') 
@@ -30,6 +31,12 @@ function readStartForm() {
 	    document.getElementById("second-player").innerHTML = spelare2;
 	}
 
+}
+
+function closeGame(){
+	$('#game-over').modal('hide');
+	$(".page").hide();
+	$("#start").show();
 }
 
 
@@ -69,7 +76,16 @@ $(function(){
 		testFunction(6);
 	});
 });
+$(function(){
+	$(".msg-new-game").click(function(){
+		newGame();
+	});
+});
 
+function newGame(){
+	console.log("clicked");
+	game.newGame();
+}
 
 function testFunction(column) {
 	game.makeMove(column);
