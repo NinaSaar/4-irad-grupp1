@@ -32,6 +32,13 @@ spelregler {
 
 }
 
+.first-player {
+  color:red;
+}
+
+.second-player {
+  color:yellow;
+}
 
 footer img {
 	width:30px;

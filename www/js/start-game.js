@@ -1,3 +1,5 @@
+let game;
+
 $(function(){
 	$(".start-game-btn").click(readStartForm);
 });
@@ -21,19 +23,14 @@ function readStartForm() {
 		let player2 = new Player(spelare2,2,true);
 
 		// Create game object
-	    let game = new Game(player1,player2);
+	    game = new Game(player1,player2);
 
-	    document.getElementById("testspelare").innerHTML = spelare1;
+	    document.getElementById("first-player").innerHTML = spelare1;
+	    document.getElementById("second-player").innerHTML = spelare2;
 	}
 
-	/*let click = confirm("Press a button");
-	if (click == true) {
-	    x = "You pressed OK!";
-	} else {
-	    x = "You pressed Cancel!";
-	}*/
-
 }
+
 
 
 $(function(){
@@ -74,6 +71,6 @@ $(function(){
 
 
 function testFunction(column) {
-	console.log(column);
+	game.makeMove(column);
 }
 

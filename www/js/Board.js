@@ -167,4 +167,37 @@ class Board {
 
 		return fourInRow;
 	}
+
+	addCoin(column, coin){
+		let arr = this.columns[column];
+		for(let i = 0; i<arr.length;i++){
+			if(arr[i]===" "){
+				this.columns[column][i] = coin;
+				this.addToBoard(column, i, coin);
+				break;
+			}
+		}
+	}
+
+	addToBoard(column, row, coin){
+		let id = "c"+column+"r"+row;
+		console.log(id);
+		if(coin === "R"){
+			document.getElementById(id).src = "Foton/brick_red.png";
+		}else{
+			document.getElementById(id).src = "Foton/brick_ylw.png";
+		}
+	}
+
+	isMovePossible(column){
+		let arr = this.columns[column];
+		console.log(arr);
+		for(let i = 0; i<arr.length;i++){
+			if(arr[i]===" "){
+				console.log(arr[i]);
+				return true;
+			}
+		}
+		return false;
+	}
 }

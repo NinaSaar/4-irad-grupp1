@@ -16,4 +16,7 @@ class Player {
 			this.color = "Y";
 		}
 	}
+	getColor(){
+		return this.color;
+	}
 }
