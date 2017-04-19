@@ -167,7 +167,7 @@ class Board {
 
 		return fourInRow;
 	}
-
+	// Adds "R" or "Y" coin in correct cell
 	addCoin(column, coin){
 		let arr = this.columns[column];
 		for(let i = 0; i<arr.length;i++){
@@ -179,6 +179,7 @@ class Board {
 		}
 	}
 
+	// Changes the board to reflect an added coin
 	addToBoard(column, row, coin){
 		let id = "c"+column+"r"+row;
 		if(coin === "R"){
@@ -188,6 +189,8 @@ class Board {
 		}
 	}
 
+	// Checks if a move is possible to do
+	// a move is not possible to do if a column is filled with coins
 	isMovePossible(column){
 		let arr = this.columns[column];
 		for(let i = 0; i<arr.length;i++){
