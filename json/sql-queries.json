@@ -1,0 +1,8 @@
+{
+
+  "allHighScores": 
+  "SELECT * FROM high_scores ORDER BY score DESC",
+
+  "addHighScore":
+  "INSERT INTO high_scores (high_score_date,score,player_name) VALUES(?,?,?)"
+}
