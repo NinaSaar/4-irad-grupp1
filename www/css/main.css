@@ -32,6 +32,9 @@ spelregler {
 
 }
 
+.high-score-list {
+  list-style-type: none;
+}
 
 footer img {
 	width:30px;

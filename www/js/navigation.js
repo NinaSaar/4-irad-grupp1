@@ -4,7 +4,13 @@ $(switchPage);
 
 function switchPage() {
 	$(".page").hide();
+	
 	let l = location.hash;
+	
+	if (l === "#highscore") {
+		getHighScoreList();
+	}
+
 	if(!l) {
 		l = '#start';
 	}
@@ -52,3 +58,15 @@ $(function(){
 		},0);
 	});
 });
+
+function getHighScoreList() {
+	new RunSqlQuery(
+	  'allHighScores',
+	  function(response){
+	  	for (let i = 0;i < response.length & i < 10;i++) {
+		    $("#high-score-"+i).html((i + 1) + ". " + response[i].player_name + ", " + response[i].score + " drag");
+		}
+  	}
+);
+
+}
