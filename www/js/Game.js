@@ -51,11 +51,9 @@ class Game {
 	//Updates arrow on screen
 	updateArrow(){
 		if(this.whoToPlay() === this.player1){
-			console.log("updateArrow1");
 			this.playerArrow.src = "Foton/arrowleft.png"
 			document.getElementById("player-arrow").src = "Foton/arrowleft.png"
 		}else{
-			console.log("updateArrow2");
 			this.playerArrow.src = "Foton/arrowright.png"
 		}
 	}

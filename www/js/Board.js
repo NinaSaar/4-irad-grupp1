@@ -181,7 +181,6 @@ class Board {
 
 	addToBoard(column, row, coin){
 		let id = "c"+column+"r"+row;
-		console.log(id);
 		if(coin === "R"){
 			document.getElementById(id).src = "Foton/brick_red.png";
 		}else{
@@ -191,10 +190,8 @@ class Board {
 
 	isMovePossible(column){
 		let arr = this.columns[column];
-		console.log(arr);
 		for(let i = 0; i<arr.length;i++){
 			if(arr[i]===" "){
-				console.log(arr[i]);
 				return true;
 			}
 		}
