@@ -24,6 +24,7 @@ function readStartForm() {
 
 		// Create game object
 	    game = new Game(player1,player2);
+	    game.clearBoard();
 
 	    document.getElementById("first-player").innerHTML = spelare1;
 	    document.getElementById("second-player").innerHTML = spelare2;

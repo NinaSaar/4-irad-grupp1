@@ -184,8 +184,10 @@ class Board {
 		let id = "c"+column+"r"+row;
 		if(coin === "R"){
 			document.getElementById(id).src = "Foton/brick_red.png";
-		}else{
+		}else if (coin === "Y") {
 			document.getElementById(id).src = "Foton/brick_ylw.png";
+		}else{
+			document.getElementById(id).src = "Foton/brick_whi.png";
 		}
 	}
 
@@ -199,5 +201,14 @@ class Board {
 			}
 		}
 		return false;
+	}
+
+	clearBoard(){
+		for(let i=0; i<this.columns.length; i++){
+			let r = this.columns[i];
+			for(let j=0; j<r.length; j++){
+				this.addToBoard(i,j,"");
+			}
+		}
 	}
 }

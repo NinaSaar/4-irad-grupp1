@@ -66,11 +66,19 @@ class Game {
 	makeMove(col){
 		if(this.board.isMovePossible(col)){
 			this.board.addCoin(col, this.whoToPlay().getColor());
+			if(this.board.checkBoard() === "Y"){
+				console.log("gul vinner");
+			}else if(this.board.checkBoard() === "R"){
+				console.log("röd vinner");
+			}
 			this.turn++;
 			this.updateArrow();
 		}else{
 			//outprint wrong move
 		}
+	}
+	clearBoard(){
+		this.board.clearBoard();
 	}
 }
 //$(draw)
