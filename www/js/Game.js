@@ -74,7 +74,7 @@ class Game {
 			this.turn++;
 			this.updateArrow();
 		}else{
-			//outprint wrong move
+			$('#varna-full-column').modal('show') 
 		}
 	}
 	clearBoard(){
