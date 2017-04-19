@@ -32,12 +32,8 @@ spelregler {
 
 }
 
-.first-player {
-  color:red;
-}
-
-.second-player {
-  color:yellow;
+.high-score-list {
+  list-style-type: none;
 }
 
 footer img {
