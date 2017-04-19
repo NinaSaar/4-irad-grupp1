@@ -24,7 +24,16 @@ function draw(board) {
 				$('p.b' + ii + i).html('<img src="Foton/brick_whi.png">');
 			}
 		}
-	}
+	} 
+}
+
+function notify_gameover (){
+	//dummie hook
+	$('#avsluta-spel .modal-header #title').text("Spelare x vann");
+     
+    $('#avsluta-spel').modal({backdrop: 'static', keyboard: false});
+
+
 }
 
 $(draw)
