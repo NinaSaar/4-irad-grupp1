@@ -5,12 +5,7 @@ class Board {
 	// Each element represents one slot and should 
 	// contain " " for empty, "R" for red coin or "Y" for yellow coin.
 
-	constructor(
-		columns,
-		numberOfColumns,
-		numberOfRows,
-		winner
-	) {
+	constructor() {
 		this.columns = [
 			[" "," "," "," "," "," "],
 			[" "," "," "," "," "," "],

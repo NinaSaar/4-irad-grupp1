@@ -2,9 +2,12 @@ class Game {
 	// Connect four game
 
 	constructor(
-		board
+		player1,
+		player2
 	) {
-		board = new Board();
+		this.board = new Board();
+		this.player1 = player1;
+		this.player2 = player2;
 	}
 }
 
@@ -21,7 +24,16 @@ function draw(board) {
 				$('p.b' + ii + i).html('<img src="Foton/brick_whi.png">');
 			}
 		}
-	}
+	} 
+}
+
+function notify_gameover (){
+	//dummie hook
+	$('#avsluta-spel .modal-header #title').text("Spelare x vann");
+     
+    $('#avsluta-spel').modal({backdrop: 'static', keyboard: false});
+
+
 }
 
 $(draw)

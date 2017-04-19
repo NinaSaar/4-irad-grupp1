@@ -15,6 +15,14 @@ function readStartForm() {
 		// Show play game page
 	    $(".page").hide();
 	    $("#play").show();
+
+	    // Create 2 human player objects with specified names
+		let player1 = new Player(spelare1,1,true);
+		let player2 = new Player(spelare2,2,true);
+
+		// Create game object
+	    let game = new Game(player1,player2);
+
 	    document.getElementById("testspelare").innerHTML = spelare1;
 	}
 
@@ -26,6 +34,7 @@ function readStartForm() {
 	}*/
 
 }
+
 
 $(function(){
 	$(".col0").click(function(){
@@ -67,3 +76,4 @@ $(function(){
 function testFunction(column) {
 	console.log(column);
 }
+
