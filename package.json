@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/NinaSaar/4-irad-grupp1#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mysql": "^2.13.0"
   }
 }
