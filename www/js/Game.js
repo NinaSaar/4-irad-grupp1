@@ -52,8 +52,14 @@ class Game {
 	updateArrow(){
 		if(this.whoToPlay() === this.player1){
 			this.playerArrow.src = "Foton/arrowleft.png"
+			if (this.player1.human == false) {
+				this.makeMove(Math.floor(Math.random() * 7));
+			}
 		}else{
 			this.playerArrow.src = "Foton/arrowright.png"
+			if (this.player2.human == false) {
+				this.makeMove(Math.floor(Math.random() * 7));
+			}
 		}
 	}
 
@@ -61,9 +67,12 @@ class Game {
 	winnerFound(winner){
 		document.getElementById("msg-winner").innerHTML = winner.getName();
 		document.getElementById("msg-round").innerHTML = this.turn;
-		document.getElementById("hs-cb").checked = false;
-		//document.getElementById("hs-cb").disabled = true;
-		$('#game-over').modal('show');
+		maxTop10HighScore(this.turn, function(res){
+			document.getElementById("hs-cb").checked = false;
+			document.getElementById("hs-cb").disabled = !res;
+			$('#game-over').modal('show');
+		});
+		
 	}
 
 	/*logic for making a move
@@ -86,16 +95,48 @@ class Game {
 				this.updateArrow();
 			}
 		}else{
-
-			$('#varna-full-column').modal('show')
+			$('#varna-full-column').modal('show');
 		}
 		if (this.turn===42){
-			
+
 			$('#oavgjort-spel .modal-header #title').text("Oavgjort spel");
-	     
-	    	$('#oavgjort-spel').modal('show');
+
+			$('#oavgjort-spel').modal('show');
 		}
 	}
+
+	comMakeMove() {
+		let col = Math.floor(Math.random() * 7);
+		let rep = true;
+
+		while (rep == true) {
+			if(this.board.isMovePossible(col)){
+				rep = false;
+				this.board.addCoin(col, this.whoToPlay().getColor());
+				this.turn++;
+				let winCol = this.board.checkBoard();
+				if(winCol === "Y" || winCol === "R"){
+					if(this.player1.getColor() === winCol){
+						this.winnerFound(this.player1);
+					}else{
+						this.winnerFound(this.player2);
+					}
+				}else{
+					this.updateArrow();
+				}
+			}else{
+				col = Math.floor(Math.random() * 7);
+			}
+			if (this.turn===42){
+				rep = false;
+
+				$('#oavgjort-spel .modal-header #title').text("Oavgjort spel");
+
+				$('#oavgjort-spel').modal('show');
+			}
+		}
+	}
+
 	clearBoard(){
 		this.board.clearBoard();
 	}
