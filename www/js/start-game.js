@@ -6,9 +6,7 @@ $(function(){
 
 function readStartForm() {
 	if(document.getElementById("hs-cb").checked){
-		/***
-		/* TODO: Anropa funktion för att spara resultat
-		*/
+		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
 	}
 	let spelare1 = $('#spelare1').val();
 	let spelare2 = $('#spelare2').val();
@@ -54,6 +52,9 @@ function readStartForm() {
 }
 
 function closeGame(){
+	if(document.getElementById("hs-cb").checked){
+		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
+	}
 	$('#game-over').modal('hide');
 	location.hash = "#start";
 }

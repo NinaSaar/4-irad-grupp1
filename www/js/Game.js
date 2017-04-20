@@ -62,7 +62,7 @@ class Game {
 		document.getElementById("msg-winner").innerHTML = winner.getName();
 		document.getElementById("msg-round").innerHTML = this.turn;
 		document.getElementById("hs-cb").checked = false;
-		document.getElementById("hs-cb").disabled = true;
+		//document.getElementById("hs-cb").disabled = true;
 		$('#game-over').modal('show');
 	}
 
