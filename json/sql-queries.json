@@ -1,13 +1,6 @@
 {
-
-  "allHighScores": 
-  "SELECT * FROM high_scores",
-
   "top10HighScores": 
   "SELECT * FROM high_scores ORDER BY score, high_score_date DESC LIMIT 10",
-
-  "maxTop10HighScore":
-  "SELECT MAX(score) AS max_top_10_score FROM high_scores ORDER BY score, high_score_date DESC LIMIT 10",
 
   "addHighScore":
   "INSERT INTO high_scores SET ?"

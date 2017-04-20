@@ -21,11 +21,15 @@ function insertHighScore(name,score) {
 	)
 }
 
-function maxTop10HighScore() {
+function maxTop10HighScore(score,callbackFunc) {
 	new RunSqlQuery(
-		'maxTop10HighScore',
+		'top10HighScores',
 		function(response){
-			return response[0].max_top_10_score;
-  		}
+	  		let result = false;
+	  		if (score <= response[response.length -1].score | response.length < 10) {
+	  			result = true;
+	  		}
+	  		callbackFunc(result);
+		}
   	)
 }
