@@ -69,6 +69,11 @@ class Game {
 		document.getElementById("msg-round").innerHTML = this.turn;
 		maxTop10HighScore(this.turn, function(res){
 			document.getElementById("hs-cb").checked = false;
+			if(!res){
+				document.getElementById("highscore-test").innerHTML = "Du är tyvärr inte kvalificerad för highscorelistan.";
+			} else {				
+				document.getElementById("highscore-test").innerHTML = "Du är kvalificerad för att vara med på highscorelistan!";
+			}
 			document.getElementById("hs-cb").disabled = !res;
 			$('#game-over').modal('show');
 		});
