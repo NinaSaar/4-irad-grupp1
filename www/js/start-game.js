@@ -36,7 +36,11 @@ function readStartForm() {
 	    	}
 	    }else{
 			player1 = new Player(spelare1, 1, true);
-			player2 = new Player(spelare2, 2, true);
+			if(document.getElementById("is-computer").checked){
+				player2 = new Player("Dator", 2, false);
+			} else {
+				player2 = new Player(spelare2, 2, true);
+			}	
 	    }
 	    // Create 2 human player objects with specified names
 
