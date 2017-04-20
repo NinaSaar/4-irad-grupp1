@@ -626,7 +626,7 @@
   </div><!-- /.modal -->
 
   <!-- $('#game-over').modal('show') -->
-  <div class="modal fade" tabindex="-1" role="dialog" id="game-over">
+  <div class="modal fade" tabindex="-1" role="dialog" id="game-over" data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -662,22 +662,25 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="avsluta-spel">
+
+  <!--oavgjort spel -->
+  <div class="modal fade" tabindex="-1" role="dialog" id="oavgjort-spel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h4 id="title" class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <p>Klicka på avbryt för att komma till startsidan</p>
+          <p>Oavgjort spel</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Spela igen</button>
-          <button type="button" class="btn btn-default">Avbryt</button>
+          <button type="button" class="btn btn-primary" onclick="readStartForm()">Nytt spel</button>
+          <button type="button" class="btn btn-primary" onclick="closeGame()">Avbryt</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
+ 
 
 </body>
 </html>
