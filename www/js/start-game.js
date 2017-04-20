@@ -5,6 +5,11 @@ $(function(){
 });
 
 function readStartForm() {
+	if(document.getElementById("hs-cb").checked){
+		/***
+		/* TODO: Anropa funktion för att spara resultat
+		*/
+	}
 	let spelare1 = $('#spelare1').val();
 	let spelare2 = $('#spelare2').val();
 
