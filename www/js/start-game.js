@@ -27,8 +27,6 @@ function readStartForm() {
 	    let player1;
 	    let player2;
 	    if(game!=null){
-	    	console.log("not null");
-	    	console.log(game.player1.getName());
 	    	if(game.player1.getColor()==="R"){
 		    	player1 = new Player(game.player2.getName(), 2, true);
 		    	player2 = new Player(game.player1.getName(), 1, true);
@@ -107,7 +105,6 @@ $(function(){
 });
 
 function newGame(){
-	console.log("clicked");
 	game.newGame();
 }
 
