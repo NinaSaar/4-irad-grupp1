@@ -88,6 +88,13 @@ class Game {
 
 			$('#varna-full-column').modal('show')
 		}
+
+		if (this.turn>42){
+			//dummie hook
+			$('#oavgjort-spel .modal-header #title').text("Spelare x vann");
+	     
+	    	$('#avsluta-spel').modal({backdrop: 'static', keyboard: false});
+		}
 	}
 	clearBoard(){
 		this.board.clearBoard();
