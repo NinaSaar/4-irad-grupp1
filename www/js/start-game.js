@@ -7,13 +7,11 @@ $(function(){
 });
 
 function readStartForm() {
-<<<<<<< Updated upstream
+
 	if(document.getElementById("hs-cb").checked){
 		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
 	}
-=======
-	console.log("HOPP")
->>>>>>> Stashed changes
+
 	let spelare1 = $('#spelare1').val();
 	let spelare2 = $('#spelare2').val();
 
