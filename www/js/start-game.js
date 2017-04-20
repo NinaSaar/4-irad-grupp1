@@ -27,8 +27,6 @@ function readStartForm() {
 	    let player1;
 	    let player2;
 	    if(game!=null){
-	    	console.log("not null");
-	    	console.log(game.player1.getName());
 	    	if(game.player1.getColor()==="R"){
 		    	player1 = new Player(game.player2.getName(), 2, game.player2.human);
 		    	player2 = new Player(game.player1.getName(), 1, game.player1.human);
@@ -38,7 +36,11 @@ function readStartForm() {
 	    	}
 	    }else{
 			player1 = new Player(spelare1, 1, true);
-			player2 = new Player(spelare2, 2, true);
+			if(document.getElementById("is-computer").checked){
+				player2 = new Player("Dator", 2, false);
+			} else {
+				player2 = new Player(spelare2, 2, true);
+			}	
 	    }
 	    // Create 2 human player objects with specified names
 
@@ -63,6 +65,15 @@ function closeGame(){
 	location.hash = "#start";
 }
 
+function changePlayer2(){
+	if(document.getElementById("is-computer").checked){
+		document.getElementById("spelare2").disabled = true;
+		document.getElementById("spelare2").value = "Dator";
+	}else{
+		document.getElementById("spelare2").disabled = false;
+		document.getElementById("spelare2").value = "";
+	}
+}
 
 
 $(function(){
@@ -107,7 +118,6 @@ $(function(){
 });
 
 function newGame(){
-	console.log("clicked");
 	game.newGame();
 }
 

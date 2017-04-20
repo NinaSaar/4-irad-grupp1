@@ -67,9 +67,12 @@ class Game {
 	winnerFound(winner){
 		document.getElementById("msg-winner").innerHTML = winner.getName();
 		document.getElementById("msg-round").innerHTML = this.turn;
-		document.getElementById("hs-cb").checked = false;
-		//document.getElementById("hs-cb").disabled = true;
-		$('#game-over').modal('show');
+		maxTop10HighScore(this.turn, function(res){
+			document.getElementById("hs-cb").checked = false;
+			document.getElementById("hs-cb").disabled = !res;
+			$('#game-over').modal('show');
+		});
+		
 	}
 
 	/*logic for making a move
