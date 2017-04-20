@@ -18,17 +18,32 @@ function readStartForm() {
 		// Show play game page
 	    $(".page").hide();
 	    $("#play").show();
-
+	    let player1;
+	    let player2;
+	    if(game!=null){
+	    	console.log("not null");
+	    	console.log(game.player1.getName());
+	    	if(game.player1.getColor()==="R"){
+		    	player1 = new Player(game.player2.getName(), 2, true);
+		    	player2 = new Player(game.player1.getName(), 1, true);
+	    	}else{
+		    	player1 = new Player(game.player2.getName(), 1, true);
+		    	player2 = new Player(game.player1.getName(), 2, true);
+	    	}
+	    }else{
+			player1 = new Player(spelare1,1,true);
+			player2 = new Player(spelare2,2,true);
+	    }
 	    // Create 2 human player objects with specified names
-		let player1 = new Player(spelare1,1,true);
-		let player2 = new Player(spelare2,2,true);
 
 		// Create game object
 	    game = new Game(player1,player2);
 	    game.clearBoard();
 
-	    document.getElementById("first-player").innerHTML = spelare1;
-	    document.getElementById("second-player").innerHTML = spelare2;
+	    document.getElementById("first-player").innerHTML = game.player1.getName();
+	    document.getElementById("first-player").className = "player"+game.player1.getColor();
+	    document.getElementById("second-player").innerHTML = game.player2.getName();
+	    document.getElementById("second-player").className = "player"+game.player2.getColor();
 	}
 
 }

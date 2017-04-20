@@ -52,7 +52,6 @@ class Game {
 	updateArrow(){
 		if(this.whoToPlay() === this.player1){
 			this.playerArrow.src = "Foton/arrowleft.png"
-			document.getElementById("player-arrow").src = "Foton/arrowleft.png"
 		}else{
 			this.playerArrow.src = "Foton/arrowright.png"
 		}
@@ -75,10 +74,13 @@ class Game {
 		if(this.board.isMovePossible(col)){
 			this.board.addCoin(col, this.whoToPlay().getColor());
 			this.turn++;
-			if(this.board.checkBoard() === "Y"){
-				this.winnerFound(this.player2);
-			}else if(this.board.checkBoard() === "R"){
-				this.winnerFound(this.player1);
+			let winCol = this.board.checkBoard();
+			if(winCol === "Y" || winCol === "R"){
+				if(this.player1.getColor() === winCol){
+					this.winnerFound(this.player1);
+				}else{
+					this.winnerFound(this.player2);
+				}
 			}else{
 				this.updateArrow();
 			}
