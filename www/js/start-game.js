@@ -16,8 +16,7 @@ function readStartForm() {
 	}
 	else {
 		// Show play game page
-	    $(".page").hide();
-	    $("#play").show();
+		location.hash = "#play";
 	    let player1;
 	    let player2;
 	    if(game!=null){
@@ -50,8 +49,7 @@ function readStartForm() {
 
 function closeGame(){
 	$('#game-over').modal('hide');
-	$(".page").hide();
-	$("#start").show();
+	location.hash = "#start";
 }
 
 
