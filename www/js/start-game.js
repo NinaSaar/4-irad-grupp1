@@ -28,15 +28,15 @@ function readStartForm() {
 	    let player2;
 	    if(game!=null){
 	    	if(game.player1.getColor()==="R"){
-		    	player1 = new Player(game.player2.getName(), 2, true);
-		    	player2 = new Player(game.player1.getName(), 1, true);
+		    	player1 = new Player(game.player2.getName(), 2, game.player2.human);
+		    	player2 = new Player(game.player1.getName(), 1, game.player1.human);
 	    	}else{
-		    	player1 = new Player(game.player2.getName(), 1, true);
-		    	player2 = new Player(game.player1.getName(), 2, true);
+		    	player1 = new Player(game.player2.getName(), 1, game.player2.human);
+		    	player2 = new Player(game.player1.getName(), 2, game.player1.human);
 	    	}
 	    }else{
-			player1 = new Player(spelare1,1,true);
-			player2 = new Player(spelare2,2,true);
+			player1 = new Player(spelare1, 1, true);
+			player2 = new Player(spelare2, 2, true);
 	    }
 	    // Create 2 human player objects with specified names
 
