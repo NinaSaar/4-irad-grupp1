@@ -53,12 +53,12 @@ class Game {
 		if(this.whoToPlay() === this.player1){
 			this.playerArrow.src = "Foton/arrowleft.png"
 			if (this.player1.human == false) {
-				this.makeMove(Math.floor(Math.random() * 7));
+				this.comMakeMove();
 			}
 		}else{
 			this.playerArrow.src = "Foton/arrowright.png"
 			if (this.player2.human == false) {
-				this.makeMove(Math.floor(Math.random() * 7));
+				this.comMakeMove();
 			}
 		}
 	}
