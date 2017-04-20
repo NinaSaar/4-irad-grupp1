@@ -32,6 +32,10 @@ spelregler {
 
 }
 
+.close {
+  display: none;
+}
+
 .playerR {
   color:red;
 }
