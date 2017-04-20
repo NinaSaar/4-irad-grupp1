@@ -65,6 +65,15 @@ function closeGame(){
 	location.hash = "#start";
 }
 
+function changePlayer2(){
+	if(document.getElementById("is-computer").checked){
+		document.getElementById("spelare2").disabled = true;
+		document.getElementById("spelare2").value = "Dator";
+	}else{
+		document.getElementById("spelare2").disabled = false;
+		document.getElementById("spelare2").value = "";
+	}
+}
 
 
 $(function(){
