@@ -1,4 +1,4 @@
-window.onhashchange = switchPage;
+		window.onhashchange = switchPage;
 
 $(switchPage);
 
