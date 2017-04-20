@@ -20,3 +20,12 @@ function insertHighScore(name,score) {
 		}
 	)
 }
+
+function maxTop10HighScore() {
+	new RunSqlQuery(
+		'maxTop10HighScore',
+		function(response){
+			return response[0].max_top_10_score;
+  		}
+  	)
+}
