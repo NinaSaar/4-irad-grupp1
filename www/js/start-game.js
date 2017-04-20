@@ -38,6 +38,7 @@ function readStartForm() {
 		// Create game object
 	    game = new Game(player1,player2);
 	    game.clearBoard();
+	    game.updateArrow();
 
 	    document.getElementById("first-player").innerHTML = game.player1.getName();
 	    document.getElementById("first-player").className = "player"+game.player1.getColor();
