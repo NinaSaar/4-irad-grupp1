@@ -2,9 +2,20 @@ let game;
 
 $(function(){
 	$(".start-game-btn").click(readStartForm);
+	$(".restart-game").click(readStartForm);
+	$(".close-game").click(closeGame);
 });
 
 function readStartForm() {
+<<<<<<< Updated upstream
+	if(document.getElementById("hs-cb").checked){
+		/***
+		/* TODO: Anropa funktion för att spara resultat
+		*/
+	}
+=======
+	console.log("HOPP")
+>>>>>>> Stashed changes
 	let spelare1 = $('#spelare1').val();
 	let spelare2 = $('#spelare2').val();
 
