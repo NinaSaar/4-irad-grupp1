@@ -2,15 +2,33 @@ let game;
 
 $(function(){
 	$(".start-game-btn").click(readStartForm);
-	$(".restart-game").click(readStartForm);
+	$(".restart-game").click(newGame);
 	$(".close-game").click(closeGame);
+	$(".col0").click(function(){
+		moveListner(0);
+	});
+	$(".col1").click(function(){
+		moveListner(1);
+	});
+	$(".col2").click(function(){
+		moveListner(2);
+	});
+	$(".col3").click(function(){
+		moveListner(3);
+	});
+	$(".col4").click(function(){
+		moveListner(4);
+	});
+	$(".col5").click(function(){
+		moveListner(5);
+	});
+	$(".col6").click(function(){
+		moveListner(6);
+	});
 });
 
+//reads the player name form and then calls startGame
 function readStartForm() {
-
-	if(document.getElementById("hs-cb").checked){
-		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
-	}
 
 	let spelare1 = $('#spelare1').val();
 	let spelare2 = $('#spelare2').val();
@@ -22,49 +40,37 @@ function readStartForm() {
 		$('#varna-ej-namn').modal('show') 
 	}
 	else {
-		// Show play game page
-		location.hash = "#play";
-	    let player1;
-	    let player2;
-	    if(game!=null){
-	    	if(game.player1.getColor()==="R"){
-		    	player1 = new Player(game.player2.getName(), 2, game.player2.human);
-		    	player2 = new Player(game.player1.getName(), 1, game.player1.human);
-	    	}else{
-		    	player1 = new Player(game.player2.getName(), 1, game.player2.human);
-		    	player2 = new Player(game.player1.getName(), 2, game.player1.human);
-	    	}
-	    }else{
-			player1 = new Player(spelare1, 1, true);
-			if(document.getElementById("is-computer").checked){
-				player2 = new Player("Dator", 2, false);
-			} else {
-				player2 = new Player(spelare2, 2, true);
-			}	
-	    }
-	    // Create 2 human player objects with specified names
+		let player1 = new Player(spelare1, 1, true);
+		let player2 = new Player(spelare2, 2, !(document.getElementById("is-computer").checked));
 
-		// Create game object
-	    game = new Game(player1,player2);
-	    game.clearBoard();
-	    game.updateArrow();
-
-	    document.getElementById("first-player").innerHTML = game.player1.getName();
-	    document.getElementById("first-player").className = "player"+game.player1.getColor();
-	    document.getElementById("second-player").innerHTML = game.player2.getName();
-	    document.getElementById("second-player").className = "player"+game.player2.getColor();
+	    startGame(player1, player2);
 	}
 
 }
 
+//called by modal, saves game if it's checked and then returns to start
 function closeGame(){
 	if(document.getElementById("hs-cb").checked){
 		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
 	}
-	$('#game-over').modal('hide');
 	location.hash = "#start";
 }
 
+//starts a new game
+function startGame(player1, player2){
+	location.hash = "#play";
+
+	game = new Game(player1, player2);
+	game.clearBoard();
+	game.updateArrow();
+
+	document.getElementById("first-player").innerHTML = game.player1.getName();
+	document.getElementById("first-player").className = "player"+game.player1.getColor();
+	document.getElementById("second-player").innerHTML = game.player2.getName();
+	document.getElementById("second-player").className = "player"+game.player2.getColor();
+}
+
+//this function changes the form to computer if the checkbox is checked
 function changePlayer2(){
 	if(document.getElementById("is-computer").checked){
 		document.getElementById("spelare2").disabled = true;
@@ -75,53 +81,15 @@ function changePlayer2(){
 	}
 }
 
-
-$(function(){
-	$(".col0").click(function(){
-		testFunction(0);
-	});
-});
-$(function(){
-	$(".col1").click(function(){
-		testFunction(1);
-	});
-});
-$(function(){
-	$(".col2").click(function(){
-		testFunction(2);
-	});
-});
-$(function(){
-	$(".col3").click(function(){
-		testFunction(3);
-	});
-});
-$(function(){
-	$(".col4").click(function(){
-		testFunction(4);
-	});
-});
-$(function(){
-	$(".col5").click(function(){
-		testFunction(5);
-	});
-});
-$(function(){
-	$(".col6").click(function(){
-		testFunction(6);
-	});
-});
-$(function(){
-	$(".msg-new-game").click(function(){
-		newGame();
-	});
-});
-
+//called by modal if user decides to play a new game with the same people
 function newGame(){
-	game.newGame();
+	if(document.getElementById("hs-cb").checked){
+		insertHighScore(document.getElementById("msg-winner").innerHTML, (document.getElementById("msg-round").innerHTML/1));
+	}
+	startGame(game.player2, game.player1);
 }
 
-function testFunction(column) {
+//called by the columns on the board when a player makes a move
+function moveListner(column) {
 	game.makeMove(column);
 }
-
