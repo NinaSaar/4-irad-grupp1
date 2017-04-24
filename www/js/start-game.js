@@ -40,8 +40,8 @@ function readStartForm() {
 		$('#varna-ej-namn').modal('show') 
 	}
 	else {
-		let player1 = new Player(spelare1, 1, true);
-		let player2 = new Player(spelare2, 2, !(document.getElementById("is-computer").checked));
+		let player1 = new Player(spelare1, 1, !(document.getElementById("is-computer1").checked));
+		let player2 = new Player(spelare2, 2, !(document.getElementById("is-computer2").checked));
 
 	    startGame(player1, player2);
 	}
@@ -71,13 +71,21 @@ function startGame(player1, player2){
 }
 
 //this function changes the form to computer if the checkbox is checked
-function changePlayer2(){
-	if(document.getElementById("is-computer").checked){
+function changePlayer(){
+	if(document.getElementById("is-computer2").checked){
 		document.getElementById("spelare2").disabled = true;
 		document.getElementById("spelare2").value = "Dator";
 	}else{
 		document.getElementById("spelare2").disabled = false;
 		document.getElementById("spelare2").value = "";
+	}
+
+	if(document.getElementById("is-computer1").checked){
+		document.getElementById("spelare1").disabled = true;
+		document.getElementById("spelare1").value = "Dator";
+	}else{
+		document.getElementById("spelare1").disabled = false;
+		document.getElementById("spelare1").value = "";
 	}
 }
 
