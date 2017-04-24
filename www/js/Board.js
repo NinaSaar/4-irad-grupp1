@@ -39,9 +39,11 @@ class Board {
 		let j;
 
 		// check vertically (columns)
-		for (let column of this.columns) {
+		for (i = 0; i < this.columns.length; i++) {
+			let column = this.columns[i];
 			result = this.findFourInRow(column);
 			if (result > -1) {
+				this.paintWinCells(result, i, 12);
 				return this.winner;
 			}
 		}
@@ -50,6 +52,7 @@ class Board {
 		for (i = 0;i < this.numberOfRows;i++) {
 			result = this.findFourInRow(this.getHorizontalRow(i));
 			if (result > -1) {
+				this.paintWinCells(i, result, 3);
 				return this.winner;
 			}
 		}
@@ -61,6 +64,7 @@ class Board {
 		do {
 			result = this.findFourInRow(this.getDiagonalRowUp(i,j));
 			if (result > -1) {
+				this.paintWinCells((j-result), (i+result), 4.5);
 				return this.winner;
 			}
 
@@ -79,6 +83,7 @@ class Board {
 		do {
 			result = this.findFourInRow(this.getDiagonalRowDown(i,j));
 			if (result > -1) {
+				this.paintWinCells((j+result), (i+result), 1.5);
 				return this.winner;
 			}
 
@@ -203,11 +208,56 @@ class Board {
 		return false;
 	}
 
+	//paints the whole board white
 	clearBoard(){
 		for(let i=0; i<this.columns.length; i++){
 			let r = this.columns[i];
 			for(let j=0; j<r.length; j++){
 				this.addToBoard(i,j,"");
+			}
+		}
+	}
+
+	//paints the 4 coins that won the game the right color
+	paintWinCells(startCellR, startCellC, direction){
+		let img;
+		if(this.winner === "R"){
+			img = "Foton/brick_red_win.png"
+		}else {
+			img = "Foton/brick_ylw_win.png"
+		}
+		//paint vertically up
+		if(direction === 12){
+			for(let i=0; i < 4; i++){
+				let id = "c"+startCellC+"r"+startCellR;
+				document.getElementById(id).src = img;
+				startCellR++;
+			}
+		} 
+		//paint horizontally right
+		else if(direction === 3 ){
+			for(let i=0; i < 4; i++){
+				let id = "c"+startCellC+"r"+startCellR;
+				document.getElementById(id).src = img;
+				startCellC++;
+			}
+		}
+		//paint diagonally up
+		else if(direction === 1.5 ){
+			for(let i=0; i < 4; i++){
+				let id = "c"+startCellC+"r"+startCellR;
+				document.getElementById(id).src = img;
+				startCellC++;
+				startCellR++;
+			}
+		}
+		//paint diagonally down
+		else if(direction === 4.5 ){
+			for(let i=0; i < 4; i++){
+				let id = "c"+startCellC+"r"+startCellR;
+				document.getElementById(id).src = img;
+				startCellC++;
+				startCellR--;
 			}
 		}
 	}

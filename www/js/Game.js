@@ -68,6 +68,11 @@ class Game {
 		document.getElementById("msg-winner").innerHTML = winner.getName();
 		document.getElementById("msg-round").innerHTML = this.turn;
 		maxTop10HighScore(this.turn, function(res){
+			let hsText = "Du är tyvärr inte kvalificerad för highscorelistan.";
+			if(res){
+				hsText = "Du är kvalificerad för att vara med i highscorelistan!";
+			}
+			document.getElementById("hs-text").innerHTML = hsText;
 			document.getElementById("hs-cb").checked = false;
 			document.getElementById("hs-cb").disabled = !res;
 			$('#game-over').modal('show');

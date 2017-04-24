@@ -110,6 +110,7 @@
 
       <!-- Create game page -->
 
+<<<<<<< HEAD
       <div class="page" id="create">
         <div class="row">
           <div class="col-sm-3">
@@ -121,6 +122,7 @@
             <div class="form-group">
               <label for="spelare1">Namn på spelare 1:</label>
               <input type="text" class="form-control" id="spelare1">
+              <input type="checkbox" name="red-com" value="true" id="is-computer1" onchange="changePlayer()">Dator
             </div>
           </div>
         </div>
@@ -129,7 +131,7 @@
             <div class="form-group">
               <label for="spelare2">Namn på spelare 2:</label>
               <input type="text" class="form-control" id="spelare2">
-              <input type="checkbox" name="ylw-com" value="true" id="is-computer" onchange="changePlayer2()">Dator
+              <input type="checkbox" name="ylw-com" value="true" id="is-computer2" onchange="changePlayer()">Dator
             </div>
           </div>
         </div>
@@ -635,18 +637,17 @@
                 <h1 id="msg-round">rundor</h1>
               </div>
             </div>
-            <p id="highscore">Du är tyvärr inte kvalificerad för highscorelistan.</p>
+            <p id="hs-text">Du är tyvärr inte kvalificerad för highscorelistan.</p>
             <label><input type="checkbox" id="hs-cb"> Spara i highscorelistan</label>
             <p> </br>Klicka på ny spel för att spela igen </br>Klicka på avbryt för att återgå till startsidan</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="restart-game btn btn-primary">Nytt spel</button>
-            <button type="button" class="close-game btn btn-primary">Avbryt</button>
+            <button type="button" class="restart-game btn btn-primary" data-dismiss="modal">Nytt spel</button>
+            <button type="button" class="close-game btn btn-primary" data-dismiss="modal">Avbryt</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
-
 
     <!--oavgjort spel -->
     <div class="modal fade" tabindex="-1" role="dialog" id="oavgjort-spel">
