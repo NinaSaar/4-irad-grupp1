@@ -38,10 +38,12 @@ spelregler {
 
 .playerR {
   color:red;
+  text-shadow: 0px 0px 2px black;
 }
 
 .playerY {
   color:yellow;
+  text-shadow: 0px 0px 2px black;
 }
 
 .high-score-list {
