@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>4 i rad</title>
-  <meta charset="utf8">
-  <!-- Bootstrap CSS -->
-  <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="bootstrap/css/cerulean-theme.css">
-  <!-- My own CSS -->
-  <link rel="stylesheet" href="css/main.css">
-  <!-- JavaScript libraries -->
-  <script src="js/jquery.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
-  <!-- My own JS -->
-  <script src="js/main.js"></script>
-  <script src="js/Game.js"></script>
-  <script src="js/Board.js"></script>
-  <script src="js/Player.js"></script>
-  <script src="js/start-game.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/database.js"></script>
-  <script src="js/run-sql-query.class.js"></script>
-  <!-- Don't allow scaling on mobile devices -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-</head>
+  <head>
+    <title>4 i rad</title>
+    <meta charset="utf8">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bootstrap/css/cerulean-theme.css">
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JavaScript libraries -->
+    <script src="js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- My own JS -->
+    <script src="js/main.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/Player.js"></script>
+    <script src="js/start-game.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/run-sql-query.class.js"></script>
+    <!-- Don't allow scaling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  </head>
 
-<body>
+  <body>
 
-  <!-- här börjar menyn-->
+    <!-- här börjar menyn-->
 
-  <header class="container">
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
+    <header class="container">
+      <nav class="navbar navbar-default">
         <div class="navbar-header">
+          <a class="navbar-brand" href="#start"><img src="Foton/litenikon.png" class="ikon" width=42px height=42px></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#start"><img src="Foton/litenikon.png" div class="ikon" style="width:42px;height:42px;border:0;"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,618 +48,624 @@
             <li><a href="#highscore">Highscore</a></li>
           </ul>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <main class="container">
+    <main class="container">
 
-    <!-- Startsidan -->
+      <!-- Startsidan -->
 
-    <div class="page" id="start">
-      <div class="row">
+      <div class="page" id="start">
+        <div class="row">
 
-        <!--- den fina bilden och knappdelen -->
+          <!--- den fina bilden och knappdelen -->
 
-        <div class="col-md-7">
-          <div class="jumbotron margin-before-jumbo">
-            <h1>Välkommen</h1> 
-            <p>Nu ska vi spela fyra i rad!</p>
-            <a href="#create" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
+          <div class="col-md-7">
+            <div class="jumbotron margin-before-jumbo">
+              <h1>Välkommen</h1> 
+              <p>Nu ska vi spela fyra i rad!</p>
+              <a href="#create" type="button" class="start-btn btn btn-primary btn-md">Spela</a> 
+            </div>
+          </div>
+
+          <div class="col-md-5 text-center margin-before-box">
+            <div class="box">
+              <div class="box-content">
+                <a href="#create"><img src="Foton/fyrairad.jpg"class="img-responsive" width=350px height=350px></a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-5 text-center margin-before-box">
+        <!-- Länka till andra spel delen -->
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="well well-sm">
+              <center><h4>Vill du spela något annat?</h4></center>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <center>
+              <h5><b>Schack</b></h5>
+              <a href="http://www.schack.se/spela/"><img src="Foton/schack.gif" class="img-responsive img-rounded" width=200px height=200px> </a>
+            </center>
+          </div>
+          <div class="col-md-4">
+            <center>
+              <h5><b>Snakes and ladders</b></h5>
+              <a href="http://www.counton.org/games/virtualmathfest/snakesladders.html"><img src="Foton/snakesand.jpg" class="img-responsive img-rounded" width=200px height=200px></a>
+            </center>
+          </div> 
+          <div class="col-md-4">
+            <center>
+              <h5><b>Mikaels spel</b></h5>
+              <a href="http://185.53.129.12/"><img src="Foton/mikaelsspel2.png" class="img-responsive img-rounded" height=200px> </a>
+            </center>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create game page -->
+
+      <div class="page" id="create">
+        <div class="row">
+          <div class="col-sm-3">
+            <h1>Spela fyra i rad</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="spelare1">Namn på spelare 1:</label>
+              <input type="text" class="form-control" id="spelare1">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="spelare2">Namn på spelare 2:</label>
+              <input type="text" class="form-control" id="spelare2">
+              <input type="checkbox" name="ylw-com" value="true" id="is-computer" onchange="changePlayer2()">Dator
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <button type="button" class="pull-right btn btn-primary start-game-btn">Starta</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spelregelsidan -->
+
+      <div class="page" id="spelregler">
+
+        <div class="col-md-7">
+
+          <h1> <b>Spelreger Fyra i rad</b></h1>
+          <p></p>
+          <h5><b>Startposition och spelsyfte</b></h5>
+          <p>Fyra i rad är ett populärt spel eftersom man kan lära sig de enkla reglerna snabbt och spelet ger nöje för en lång tid. Syftet med detta spel är att placera fyra pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Spelet spelas på en fyrkantig bräda 8x8 rutor och börjar med ett tomt fält</p>
+
+          <p><h5><b>Hur placerar man pjäser</b></h5></p>
+
+          <p>Båda spelarna placerar sina pjäser (en pjäs per drag) på brädet. Regeln är att pjäsen alltid "faller ner". Det betyder att pjäsen kan placeras på nedersta raden eller en rad över en annan pjäs i samma kolumn. </p>
+
+          <p><h5><b>Hur avslutas spelet</b></h5></p>
+
+          <p>Spelet avslutas om ett av följande villkor uppfylls:</p>
+          <p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Den spelaren vinner spelet.</p>
+          <p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst. I detta fall slutar spelet i draw/oavgjort. </p>
+        </div>
+
+        <div class="col-md-5 text-center">
           <div class="box">
             <div class="box-content">
 
+              <p><img src="Foton/fyrairad-regler.gif" class="img-responsive img-rounded" alt="Cinque Terre" width="210px" height="200"></p>
+              <p><img src="Foton/fyrairadspel.gif" class="img-responsive img-rounded" alt="Cinque Terre" width="210px" height="200"></p>
 
-              <a href="#create"><img src="Foton/fyrairad.jpg"class="img-responsive" style="width:350px;height:350px;border:0;"></a>
             </div>
           </div>
         </div>
+      </div>    
+
+  <!-- highscore sidan -->
+
+      <div class="page" id="highscore">
+
+        <div class="row">
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+            <h1>Är du en av top tio?</h1>
+          </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <h5>Placering</h5>
+          </div>
+          <div class="col-sm-4">
+            <h5>Namn</h5>
+          </div>
+          <div class="col-sm-1">
+            <h5>Rundor</h5>
+          </div>
+          <div class="col-sm-4">
+            <h5>Datum</h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-0"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-0"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-0"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-0"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-1"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-1"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-1"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-1"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-2"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-2"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-2"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-2"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-3"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-3"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-3"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-3"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-4"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-4"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-4"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-4"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-5"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-5"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-5"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-5"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-6"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-6"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-6"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-6"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-7"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-7"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-7"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-7"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-8"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-8"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-8"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-8"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-rank-9"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-name-9"></p>
+          </div>
+          <div class="col-sm-1">
+            <p id="hs-score-9"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="hs-date-9"></p>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Länka till andra spel delen -->
+      <!-- Play page -->
 
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="well well-sm">
-            <center><h4>Vill du spela något annat?</h4></center>
+      <div class="page" id="play">
+        <div class="row">
+          <div class="col-sm-3">
+            <h1 id="first-player" class="first-player"></h1>
+          </div>
+          <div class="col-sm-3">
+            <img id="player-arrow" src="Foton/arrowleft.png" class="img-responsive">
+          </div>
+          <div class="col-sm-3">
+            <h1 id="second-player" class="second-player"></h1>
+          </div>
+        </div>
+        <!--Row 0-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b00 col0"><img id="c0r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b01 col1"><img id="c1r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b02 col2"><img id="c2r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b03 col3"><img id="c3r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b04 col4"><img id="c4r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b05 col5"><img id="c5r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b06 col6"><img id="c6r5" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+        </div>
+        <!--Row 1-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b10 col0"><img id="c0r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b11 col1"><img id="c1r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b12 col2"><img id="c2r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b13 col3"><img id="c3r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b14 col4"><img id="c4r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b15 col5"><img id="c5r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b16 col6"><img id="c6r4" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+        </div>
+        <!--Row 2-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b20 col0"><img id="c0r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b21 col1"><img id="c1r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b22 col2"><img id="c2r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b23 col3"><img id="c3r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b24 col4"><img id="c4r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b25 col5"><img id="c5r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b26 col6"><img id="c6r3" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+        </div>
+        <!--Row 3-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b30 col0"><img id="c0r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b31 col1"><img id="c1r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b32 col2"><img id="c2r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b33 col3"><img id="c3r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b34 col4"><img id="c4r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b35 col5"><img id="c5r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b36 col6"><img id="c6r2" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+        </div>
+        <!--Row 4-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b40 col0"><img id="c0r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b41 col1"><img id="c1r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b42 col2"><img id="c2r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b43 col3"><img id="c3r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b44 col4"><img id="c4r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b45 col5"><img id="c5r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b46 col6"><img id="c6r1" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+        </div>
+        <!--Row 5-->
+        <div class="row">
+          <div class="col-xs-1 coin"> <!--Col 0-->
+            <p class="b50 col0"><img id="c0r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 1-->
+            <p class="b51 col1"><img id="c1r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 2-->
+            <p class="b52 col2"><img id="c2r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 3-->
+            <p class="b53 col3"><img id="c3r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 4-->
+            <p class="b54 col4"><img id="c4r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 5-->
+            <p class="b55 col5"><img id="c5r0" src="Foton/brick_whi.png" class="img-responsive"></p>
+          </div>
+          <div class="col-xs-1 coin"> <!--Col 6-->
+            <p class="b56 col6"><img id="c6r0" src="Foton/brick_whi.png" class="img-responsive"></p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <center>
-            <h5><b>Schack</b></h5>
-            <a href="http://www.schack.se/spela/"><img src="Foton/schack.gif" style="width:200px;height:200px;border:0;" class="img-rounded"> </a>
-          </center>
+    </main>
+
+    <!--Här la ja in footern-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="well well-sm">
+              <h3><center>Kontakta oss</center></h3>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <center>
-            <h5><b>Snakes and ladders</b></h5>
-            <a href="http://www.counton.org/games/virtualmathfest/snakesladders.html"><img src="Foton/snakesand.jpg" style="width:200px;height:200px;border:0;" class="img-rounded"></a>
-          </center>
-        </div> 
-        <div class="col-md-4">
-          <center>
-            <h5><b>Mikaels spel</b></h5>
-            <a href="http://185.53.129.12/"><img src="Foton/mikaelsspel.png" style="width:200px;height:200px;border:0;" class="img-rounded"> </a>
-          </center>
-        </div>
-      </div>
-    </div>
-
-    <!-- Create game page -->
-
-    <div class="page" id="create">
-      <div class="row">
-        <h1>Skapa spel</h1>
-      </div>
-      <div class="row">
-        <div class="form-group">
-          <label for="spelare1">Namn på spelare 1:</label>
-          <input type="text" class="form-control" id="spelare1">
-        </div>
-        <div class="form-group">
-          <label for="spelare2">Namn på spelare 2:</label>
-          <input type="text" class="form-control" id="spelare2">
-          <input type="checkbox" name="ylw-com" value="true" id="is-computer" onchange="changePlayer2()">Dator
-        </div>
-      </div>
-      <div class="row">
-        <button type="button" class="pull-right btn btn-primary start-game-btn">Starta</button>
-      </div>
-    </div>
-
-    <!-- Spelregelsidan -->
-
-    <div class="page" id="spelregler">
-
-      <div class="col-md-7">
-
-        <h1> <b>Spelreger Fyra i rad</b></h1>
-        <p></p>
-        <h5><b>Startposition och spelsyfte</b></h5>
-        <p>Fyra i rad är ett populärt spel eftersom man kan lära sig de enkla reglerna snabbt och spelet ger nöje för en lång tid. Syftet med detta spel är att placera fyra pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Spelet spelas på en fyrkantig bräda 8x8 rutor och börjar med ett tomt fält</p>
-
-        <p><h5><b>Hur placerar man pjäser</b></h5></p>
-
-        <p>Båda spelarna placerar sina pjäser (en pjäs per drag) på brädet. Regeln är att pjäsen alltid "faller ner". Det betyder att pjäsen kan placeras på nedersta raden eller en rad över en annan pjäs i samma kolumn. </p>
-
-        <p><h5><b>Hur avslutas spelet</b></h5></p>
-
-        <p>Spelet avslutas om ett av följande villkor uppfylls:</p>
-        <p>• En spelare placerar fyra eller fler pjäser i en sammanhängande rad vertikalt, horisontellt eller diagonalt. Den spelaren vinner spelet.</p>
-        <p>• Alla rutor på brädet är fyllda och ingen av spelarna uppfyller villkoren för vinst. I detta fall slutar spelet i draw/oavgjort. </p>
-      </div>
-
-      <div class="col-md-5 text-center">
-        <div class="box">
-          <div class="box-content">
-
-            <p><img src="Foton/fyrairad-regler.gif" class="img-responsive" alt="Cinque Terre" width="210px" height="200" lass="img-rounded"></p>
-            <p><img src="Foton/fyrairadspel.gif" class="img-responsive" alt="Cinque Terre"width="210px" height="200" lass="img-rounded"></p>
-
+        <div class="row">
+          <div class="col-md-4">
+            <center>
+              <img src="Foton/address.png"  class="img-circle"> 
+              <h4 class="footertext">Adress</h4>
+              <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan</p>
+            </center>
+          </div>
+          <div class="col-md-4">
+            <center>
+              <img src="Foton/emailikon.png" class="img-circle"> 
+              <h4 class="footertext">Email</h4>
+              <p class="footertext">fyrairad@spela.nu</p>
+            </center>
+          </div>
+          <div class="col-md-4">
+            <center>
+              <img src="Foton/telefonikon.png" class="img-circle"> 
+              <h4 class="footertext">Telefon</h4>
+              <p class="footertext">020 fyrairad</p>
+            </center>
           </div>
         </div>
       </div>
-    </div>    
+    </footer>
 
-<!-- highscore sidan -->
+    <!-- Här är en modal som varnar om man inte skrivit in namn -->
 
-    <div class="page" id="highscore">
-
-      <div class="row">
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-4">
-          <h1>Är du en av top tio?</h1>
-        </div>
-        <div class="col-sm-4">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <h5>Placering</h5>
-        </div>
-        <div class="col-sm-4">
-          <h5>Namn</h5>
-        </div>
-        <div class="col-sm-1">
-          <h5>Rundor</h5>
-        </div>
-        <div class="col-sm-4">
-          <h5>Datum</h5>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-0"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-0"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-0"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-0"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-1"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-1"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-1"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-1"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-2"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-2"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-2"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-2"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-3"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-3"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-3"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-3"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-4"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-4"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-4"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-4"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-5"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-5"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-5"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-5"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-6"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-6"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-6"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-6"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-7"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-7"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-7"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-7"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-8"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-8"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-8"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-8"></p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-rank-9"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-name-9"></p>
-        </div>
-        <div class="col-sm-1">
-          <p id="hs-score-9"></p>
-        </div>
-        <div class="col-sm-4">
-          <p id="hs-date-9"></p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Play page -->
-
-    <div class="page" id="play">
-      <div class="row">
-        <div class="col-sm-3">
-          <h1 id="first-player" class="first-player"></h1>
-        </div>
-        <div class="col-sm-3">
-          <img id="player-arrow" src="Foton/arrowleft.png" class="img-responsive">
-        </div>
-        <div class="col-sm-3">
-          <h1 id="second-player" class="second-player"></h1>
-        </div>
-      </div>
-      <!--Row 0-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b00 col0"><img id="c0r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b01 col1"><img id="c1r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b02 col2"><img id="c2r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b03 col3"><img id="c3r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b04 col4"><img id="c4r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b05 col5"><img id="c5r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b06 col6"><img id="c6r5" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-      <!--Row 1-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b10 col0"><img id="c0r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b11 col1"><img id="c1r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b12 col2"><img id="c2r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b13 col3"><img id="c3r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b14 col4"><img id="c4r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b15 col5"><img id="c5r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b16 col6"><img id="c6r4" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-      <!--Row 2-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b20 col0"><img id="c0r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b21 col1"><img id="c1r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b22 col2"><img id="c2r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b23 col3"><img id="c3r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b24 col4"><img id="c4r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b25 col5"><img id="c5r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b26 col6"><img id="c6r3" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-      <!--Row 3-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b30 col0"><img id="c0r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b31 col1"><img id="c1r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b32 col2"><img id="c2r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b33 col3"><img id="c3r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b34 col4"><img id="c4r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b35 col5"><img id="c5r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b36 col6"><img id="c6r2" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-      <!--Row 4-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b40 col0"><img id="c0r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b41 col1"><img id="c1r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b42 col2"><img id="c2r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b43 col3"><img id="c3r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b44 col4"><img id="c4r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b45 col5"><img id="c5r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b46 col6"><img id="c6r1" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-      <!--Row 5-->
-      <div class="row">
-        <div class="col-xs-1 coin"> <!--Col 0-->
-          <p class="b50 col0"><img id="c0r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 1-->
-          <p class="b51 col1"><img id="c1r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 2-->
-          <p class="b52 col2"><img id="c2r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 3-->
-          <p class="b53 col3"><img id="c3r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 4-->
-          <p class="b54 col4"><img id="c4r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 5-->
-          <p class="b55 col5"><img id="c5r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-        <div class="col-xs-1 coin"> <!--Col 6-->
-          <p class="b56 col6"><img id="c6r0" src="Foton/brick_whi.png" class="img-responsive"></p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!--Här la ja in footern-->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="well well-sm" width="10px" height="10">
-            <h3><center>Kontakta oss</center></h3>
+    <div class="modal fade" tabindex="-1" role="dialog" id="varna-ej-namn">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Innan du kan gå vidare för att spela..</h4>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <center>
-            <img src="Foton/address.png"  class="img-circle"> 
-            <h4 class="footertext">Adress</h4>
-            <p class="footertext">Fyra i rad vägen 4<br>444 44 Spelbrädan</p>
-          </center>
-        </div>
-        <div class="col-md-4">
-          <center>
-            <img src="Foton/emailikon.png" class="img-circle"> 
-            <h4 class="footertext">Email</h4>
-            <p class="footertext">fyrairad@spela.nu</p>
-          </center>
-        </div>
-        <div class="col-md-4">
-          <center>
-            <img src="Foton/telefonikon.png" class="img-circle"> 
-            <h4 class="footertext">Telefon</h4>
-            <p class="footertext">020 fyrairad</p>
-          </center>
-        </div>
-      </div>
-    </div>
-  </footer>
+          <div class="modal-body">
+            <p>Behöver du skriva in namnen på bägge spelarna,</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-  <!-- Här är en modal som varnar om man inte skrivit in namn -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="varna-full-column">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Ajjabajja!</h4>
+          </div>
+          <div class="modal-body">
+            <p>Den här kolumnen är full, du måste lägga i en annan!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-  <div class="modal fade" tabindex="-1" role="dialog" id="varna-ej-namn">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
+    <!-- $('#game-over').modal('show') -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="game-over" data-backdrop="static" data-keyboard="false">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Grattis!</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h1>Vinnare: </h1>
+              </div>
+              <div class="col-sm-3">
+                <h1 id="msg-winner">spelare</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <h1>Rundor: </h1>
+              </div>
+              <div class="col-sm-3">
+                <h1 id="msg-round">rundor</h1>
+              </div>
+            </div>
+            <p id="highscore">Du är tyvärr inte kvalificerad för highscorelistan.</p>
+            <label><input type="checkbox" id="hs-cb"> Spara i highscorelistan</label>
+            <p> </br>Klicka på ny spel för att spela igen </br>Klicka på avbryt för att återgå till startsidan</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="restart-game btn btn-primary">Nytt spel</button>
+            <button type="button" class="close-game btn btn-primary">Avbryt</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!--oavgjort spel -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="oavgjort-spel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Innan du kan gå vidare för att spela..</h4>
-        </div>
-        <div class="modal-body">
-          <p>Behöver du skriva in namnen på bägge spelarna,</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-  <div class="modal fade" tabindex="-1" role="dialog" id="varna-full-column">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Ajjabajja!</h4>
-        </div>
-        <div class="modal-body">
-          <p>Den här kolumnen är full, du måste lägga i en annan!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Okejdå</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
-
-  <!-- $('#game-over').modal('show') -->
-  <div class="modal fade" tabindex="-1" role="dialog" id="game-over" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Grattis!</h4>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-3">
-              <h1>Vinnare: </h1>
-            </div>
-            <div class="col-sm-3">
-              <h1 id="msg-winner">spelare</h1>
-            </div>
+            <h4 id="title" class="modal-title"></h4>
           </div>
-          <div class="row">
-            <div class="col-sm-3">
-              <h1>Rundor: </h1>
-            </div>
-            <div class="col-sm-3">
-              <h1 id="msg-round">rundor</h1>
-            </div>
+          <div class="modal-body">
+            <p>Oavgjort spel</p>
           </div>
-          <p id="highscore">Du är tyvärr inte kvalificerad för highscorelistan.</p>
-          <label><input type="checkbox" id="hs-cb"> Spara i highscorelistan</label>
-          <p> </br>Klicka på ny spel för att spela igen </br>Klicka på avbryt för att återgå till startsidan</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="restart-game btn btn-primary">Nytt spel</button>
-          <button type="button" class="close-game btn btn-primary">Avbryt</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
+          <div class="modal-footer">
+            <button type="button" class="restart-game btn btn-primary" data-dismiss="modal">Nytt spel</button>
+            <button type="button" class="close-game btn btn-primary" data-dismiss="modal" >Avbryt</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-
-  <!--oavgjort spel -->
-  <div class="modal fade" tabindex="-1" role="dialog" id="oavgjort-spel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 id="title" class="modal-title"></h4>
-        </div>
-        <div class="modal-body">
-          <p>Oavgjort spel</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="restart-game btn btn-primary" data-dismiss="modal">Nytt spel</button>
-          <button type="button" class="close-game btn btn-primary" data-dismiss="modal" >Avbryt</button>
-        </div>
-      </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-  </div><!-- /.modal -->
- 
-
-</body>
+  </body>
 </html>
