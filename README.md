@@ -31,12 +31,19 @@ Annars gör du följande:
 
 Så här lägger du upp databasen (gäller alla):
 
+Alternativ 1 - importera från fil:
+1. Välj fliken Importera
+2. Klicka på knappen Välj fil i texten under rubriken Fil att importera
+3. Leta reda på filen connect_four.sql i där du har din kopia av gruppens projekt
+4. Rulla ner på sidan och klicka på Kör
+
+Alternativ 2 - lägg upp manuellt:
 1. Klicka på Ny för att skapa en ny databas
 2. Ange connect_four som databasnamn och klicka på Skapa
 3. Skapa en tabell. Ange high_scores som tabellnamn och klicka på Kör
 4. Lägg till följande kolumner:
    - high_score_id, typ: INT, kryssa i A_I och godkänn att den är PRIMARY Index
-   - high_score_date, typ: DATETIME
+   - high_score_date, typ: TIMESTAMP
    - score, typ: INT
    - player_name, typ: VARCHAR, Längd: 100
 5. Klicka på Spara

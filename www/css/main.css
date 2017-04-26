@@ -1,7 +1,3 @@
-footer {
-	font-family: Calibri;
-}
-
 .coin {
   background-color: #0000FF;
 }
@@ -19,16 +15,12 @@ footer {
   margin-top:20px;
 }
 
-spelregler {
-  font-family: Calibri;
-}
-
 .contact-us {
   padding:0;
 }
 
 .contact-us h3 {
-  argin-top:5px;
+  margin-top:5px;
 
 }
 
@@ -38,14 +30,12 @@ spelregler {
 
 .playerR {
   color:red;
+  text-shadow: 0px 0px 2px black;
 }
 
 .playerY {
   color:yellow;
-}
-
-.high-score-list {
-  list-style-type: none;
+  text-shadow: 0px 0px 2px black;
 }
 
 footer img {
@@ -85,6 +75,9 @@ nav a {
   font-family: 'Calibri';
 }
 
+.jumbotron h1 {
+  word-wrap: break-word;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

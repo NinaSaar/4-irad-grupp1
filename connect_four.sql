@@ -1,0 +1,34 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+CREATE DATABASE IF NOT EXISTS connect_four DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE connect_four;
+
+DROP TABLE IF EXISTS high_scores;
+CREATE TABLE IF NOT EXISTS high_scores (
+  high_score_id int(11) NOT NULL AUTO_INCREMENT,
+  high_score_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  score int(11) NOT NULL,
+  player_name varchar(100) NOT NULL,
+  PRIMARY KEY (high_score_id)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+
+INSERT INTO high_scores (high_score_id, high_score_date, score, player_name) VALUES
+(1, '2017-04-01 10:50:00', 21, 'Anna Nilsson'),
+(2, '2017-04-02 15:26:00', 20, 'Pelle Lindgren'),
+(3, '2017-04-04 12:13:00', 17, 'Anders Karlgren'),
+(4, '2017-04-07 09:38:00', 19, 'Petter Larsson'),
+(5, '2017-04-11 12:31:00', 18, 'Emma Andersson'),
+(6, '2017-04-16 09:03:00', 16, 'Anneli Pettersson'),
+(7, '2017-04-18 14:54:00', 17, 'Lotta Nilsson'),
+(8, '2017-04-20 16:32:00', 17, 'Kurt Svensson'),
+(9, '2017-04-22 08:03:00', 19, 'Lennart Lundström'),
+(10, '2017-04-24 18:35:00', 14, 'Anna-Karin Berglund');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
