@@ -71,21 +71,28 @@ function startGame(player1, player2){
 }
 
 //this function changes the form to computer if the checkbox is checked
-function changePlayer(){
-	if(document.getElementById("is-computer2").checked){
-		document.getElementById("spelare2").disabled = true;
-		document.getElementById("spelare2").value = "Dator";
-	}else{
-		document.getElementById("spelare2").disabled = false;
-		document.getElementById("spelare2").value = "";
-	}
-
+function changeFirstPlayer(){
 	if(document.getElementById("is-computer1").checked){
 		document.getElementById("spelare1").disabled = true;
 		document.getElementById("spelare1").value = "Dator";
+		document.getElementById("is-computer2").disabled = true;
 	}else{
 		document.getElementById("spelare1").disabled = false;
 		document.getElementById("spelare1").value = "";
+		document.getElementById("is-computer2").disabled = false;
+	}
+}
+
+//this function changes the form to computer if the checkbox is checked
+function changeSecondPlayer(){
+	if(document.getElementById("is-computer2").checked){
+		document.getElementById("spelare2").disabled = true;
+		document.getElementById("spelare2").value = "Dator";
+		document.getElementById("is-computer1").disabled = true;
+	}else{
+		document.getElementById("spelare2").disabled = false;
+		document.getElementById("spelare2").value = "";
+		document.getElementById("is-computer1").disabled = false;
 	}
 }
 
