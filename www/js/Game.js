@@ -68,6 +68,13 @@ class Game {
 		document.getElementById("msg-winner").innerHTML = winner.getName();
 		document.getElementById("msg-round").innerHTML = this.turn;
 		maxTop10HighScore(this.turn, function(res){
+			if(winner.human){
+				var audio = new Audio('Audio/applause-01.mp3');
+				audio.play();
+			}else{
+				var audio = new Audio('Audio/fail-trombone-01.mp3');
+				audio.play();
+			}
 			let hsText = "Du är tyvärr inte kvalificerad för highscorelistan.";
 			if(res){
 				hsText = "Du är kvalificerad för att vara med i highscorelistan!";
@@ -87,6 +94,8 @@ class Game {
 	*/
 	makeMove(col){
 		if(this.board.isMovePossible(col)){
+			var audio = new Audio('Audio/coin.mp3');
+			audio.play();
 			this.board.addCoin(col, this.whoToPlay().getColor());
 			this.turn++;
 			let winCol = this.board.checkBoard();
